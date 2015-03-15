@@ -1,0 +1,829 @@
+/*
+Theme Name: MediPro Theme
+Theme URI: ...
+Description: The 2014 default theme for ...
+Author: Caroline Murphy
+Author URI: www.caroline-murphy.co.uk
+Version: 1.0
+*/
+
+@import url("css/reset.css");
+
+/* fonts */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+
+
+/* ==========================================================================
+	Structure
+========================================================================== */
+.cont {}
+	.innr { margin: 0 auto; width: 960px;}
+
+	.main { padding: 7px 0 7px; background-color: #E2E2E2;}
+
+	/* oocss clearfix */
+	.clrfx { overflow: hidden; _overflow: visible; zoom: 1;}
+
+	h1 { font: 700 45px 'Yanone Kaffeesatz', sans-serif; text-transform: uppercase;}
+	h2 { font: 700 29px 'Yanone Kaffeesatz', sans-serif; text-transform: uppercase;}
+	h3 { font: 700 25px 'Yanone Kaffeesatz', sans-serif; text-transform: uppercase;}
+	h4 { font-size: 21px;}
+	h5 { font: 400 18px 'Yanone Kaffeesatz', sans-serif; text-transform: uppercase;}
+	h6 { font-weight: 700; font-size: 13px;}
+	p, td { margin-bottom: 21px; font: 400 12px/15px 'Ubuntu', sans-serif;}
+	td { margin-bottom: 0;}
+
+	.btn { display: inline-block; padding: 8px 13px; height: 41px; text-align: left; font: 700 20px 'Yanone Kaffeesatz', sans-serif; color: #FFF; text-transform: uppercase; background-color: #62AE2A;/*green*/ background-repeat: no-repeat; vertical-align: top; border: 0; transition: background-color 0.5s ease;}
+	.btn:hover { background-color: #75C739;}
+
+	.btn_arrow_right { width: 165px; background-image: url("img/arrow-white-right-tny.png"); background-position: 143px center;}
+
+
+/* ==========================================================================
+	Header
+========================================================================== */
+
+/*** Contact Details Slide-Down ***/
+.contact_details_cont { display: none; padding: 12px 0; background-color: #2E6BA3;}
+	.contact_details_cont .innr { padding: 8px 10px 5px; width: 976px; background-color: #467FB3;}
+
+		.contact_details_cont h3 { margin-bottom: 9px; font-size: 22px; color: #FFF;}
+
+		.get_in_touch,
+		.our_address { display: inline-block; margin-right: 6px; width: 473px; vertical-align: top;}
+			/* get in touch form */
+			#wpcf7-f22-o1 p { margin-bottom: 0;}
+				.wpcf7-form-control-wrap { display: inline-block; margin: 0 6px 7px 0; vertical-align: top;}
+				.wpcf7-form-control-wrap:nth-child(even) { margin-right: 0;}
+					.wpcf7-text, 
+					.wpcf7-textarea { padding: 14px; width: 233px; height: 41px; font: 12px 'Ubuntu', sans-serif; color: #505050; background-color: #EBEBEB; border: 0;}
+					.wpcf7-textarea { width: 472px; height: 115px;}
+					#wpcf7-f22-o1 p:nth-of-type(2) { display: inline-block; width: 304px; font-size: 10px; color: #FFF; vertical-align: top;}
+					#wpcf7-f22-o1 p:nth-of-type(3) { position: relative; display: inline-block; vertical-align: top;}
+					.btn_submit, 
+					.btn_expand_contact { background-color: #003362;/*d-blue*/}
+					.btn_submit:hover, 
+					.btn_expand_contact:hover { background-color: #1A5286;}
+					.ajax-loader { position: absolute; right: 30px; top: 13px;}
+					/* alerts */
+					.wpcf7-not-valid-tip, 
+					.wpcf7-response-output { padding: 2px; background-color: #FFF;}
+					div.wpcf7-response-output { margin: 6px 0;}
+
+		.our_address { margin-right: 0;}
+			.our_address p { display: inline-block; margin-bottom: 6px; width: 234px; color: #FFF; vertical-align: top;}
+			.our_address a { color: #FFF;}
+			.map { width: 100%; height: 162px;}
+
+
+/*** All visible elements in upper-most strip ***/
+.hdr { height: 104px;}
+	.logo { float: left; display: block; margin: 10px 0 0 3px; width: 184px; height: 73px; background: url("img/logo.png") 0 0 no-repeat;}
+
+	.cntct_dtls { float: right; margin-bottom: 5px; padding: 5px 0 5px 10px; width: 481px; height: 52px; background-color: #2E6BA3;}
+
+		.social_icons { display: inline-block; margin: 7px 4px 0 0; width: 102px; vertical-align: top;}
+			.social_icons a { display: inline-block; margin-right: 4px; width: 30px; height: 30px; background-position: 0 0; background-repeat: no-repeat;}
+			.facebook { background-image: url("img/icon-facebook.png");}
+			.twitter { background-image: url("img/icon-twitter.png");}
+			.google { background-image: url("img/icon-googleplus.png");}
+
+		.tel_email { display: inline-block; margin: 5px 5px 0 0; font: 400 12px/15px 'Ubuntu', sans-serif; color: #FFF; vertical-align: top;}
+			.tel_email strong { font-weight: 700; font-size: 16px;}
+			.tel_email a { color: #FFF;}
+			.tel_email a:hover { text-decoration: underline;}
+
+		.btn_expand_contact { background-image: url("img/arrow-white-down.png");}
+		.btn_expand_contact.opened { background-image: url("img/arrow-white-up.png");}
+
+	.shop_menu { clear: right; float: right; width: 481px; height: 52px;}
+
+		.find_course { position: relative; display: inline-block; vertical-align: top;}
+			.find_course input { display: block; border: 0;}
+			.find_course input[type="text"] { padding: 12px 48px 12px 12px; width: 240px; height: 41px; font: 12px 'Ubuntu', sans-serif; background-color: #EBEBEB;}
+			.find_course input[type="submit"] { position: absolute; right: 10px; top: 8px; width: 28px; height: 24px; background: url("img/icon-search.png") center center no-repeat #2E6BA3;}
+
+		.btn_my_account { padding: 13px 11px 0 28px; font: 700 12px 'Ubuntu', sans-serif; color: #2E6BA3; text-transform: capitalize; background: url("img/icon-myacct.png") 8px center no-repeat #FFF;}
+		.btn_my_account:hover { background-color: #EBEBEB;}
+
+		.btn_basket { padding-right: 67px; background-image: url("img/icon-cart.png"); background-position: 93px center; background-repeat: no-repeat;}
+
+
+/*** Basket Pop-Out ***/
+/* necessary divs to overcome the z-index of the Nav below */
+.basket_cont {}
+	.basket_innr { position: relative; z-index: 10;}
+
+		.basket_overview { display: none; position: absolute; right: 0; top: -6px; background-color: #77B64E; border: 12px solid #5BA72A;}
+			.basket_overview td { padding: 10px; color: #FFF; border-bottom: 1px solid #88C660; vertical-align: top;}
+			.basket_overview tr:last-child td { border: 0;}
+				.basket_overview img { display: block; padding: 3px; background-color: #FFF;}
+				.basket_title { display: block; margin-bottom: 3px; /*max-width: 166px;*/ font-weight: 700; font-size: 14px; line-height: 17px; color: #FFF;}
+				.prod_price { margin-bottom: 18px; font-size: 20px;}
+				.prod_price,
+				.remove,
+				.totals { text-align: right;}
+				.quantity { font-size: 14px;}
+				.remove { display: block; font-size: 10px; color: #FFF;}
+				.totals { margin-bottom: 12px;}
+				.total { font-size: 20px; line-height: 26px;}
+				.btn_checkout { width: 165px; color: #69B529; background-image: url("img/arrow-green-right-tny.png"); background-position: 143px center; background-color: #FFF;}
+				.btn_checkout:hover { background-color: #EBEBEB;}
+
+
+/*** Navigation bar ***/
+.nav { height: 60px; background-color: #003362;}
+	.main_nav { list-style: none; text-align: center;}
+		.main_nav li { display: inline;}
+		.main_nav a { display: inline-block; padding: 17px 30px; font: 700 22px 'Yanone Kaffeesatz', sans-serif; color: #FFF; text-transform: uppercase;}
+		.main_nav a:hover { color: #003362; background-color: #FFF;}
+
+		.dropdown_1 { position: relative;}
+			.sub_menu { display: none;}
+			.dropdown_1:hover .sub_menu { position: absolute; left: -19px; display: block; padding: 28px 12px; width: 993px; text-align: left; background-color: #FFF; -webkit-box-shadow: 0 3px 7px 0 #000; box-shadow: 0 3px 7px 0 #000; z-index: 10;}
+
+				.categories { display: inline-block; margin-right: 4px; padding: 17px 12px; width: 738px; background-color: #F1F1F1; border: 1px solid #D8D8D8; -webkit-border-radius: 3px; border-radius: 3px; vertical-align: top;}
+				.more_info_courses { display: inline-block; width: 222px; vertical-align: top;}
+
+					.sub_menu h4 { margin-bottom: 12px; font-family: 'Yanone Kaffeesatz', sans-serif; color: #003362; text-transform: uppercase;}
+					.sub_menu ul { list-style: none;}
+						.sub_menu li { display: list-item;}
+						.sub_menu a { display: block; margin-bottom: 1px; padding: 4px 0; width: 231px; height: 24px; font: 700 12px 'Ubuntu', sans-serif; color: #8C8C8C; text-transform: uppercase;}
+						.sub_menu a:hover { margin-left: -13px; padding-left: 13px; background: url("img/arrow-blue-right-tny.png") 217px center no-repeat #FFF;}
+
+							.sub-menu { display: none;}
+							.menu-item-has-children:hover .sub-menu { position: absolute; left: 256px; top: 55px; display: block; padding-left: 17px; width: 310px; border-left: 1px solid #FFF;}
+								.sub-menu li {}
+								.sub-menu a { margin-bottom: 4px; width: inherit; font-weight: 400; color: #003362; text-transform: capitalize;}
+								.sub-menu a:hover { background-image: none;}
+
+
+/*** Breadcrumbs ***/
+.brdcrmbs { height: 24px;}
+	.breadcrumbs { list-style: none; margin: -3px 0 0 3px; height: 21px;}
+		.breadcrumbs li { display: inline; font: 400 12px 'Ubuntu', sans-serif; color: #888;}
+		.breadcrumbs a { color: #888;}
+
+
+/*** Company USPs ***/
+.usps { padding: 11px 0; height: 78px; text-align: center; background-color: #EBEBEB;}
+	.usp,
+	.apprvd h5 { display: inline-block; padding: 2px 51px 0; height: 51px; font: 400 18px/23px 'Yanone Kaffeesatz', sans-serif; color: #2E6BA3; text-transform: uppercase; letter-spacing: 0.17em;/*0.25em*/ vertical-align: top; border-right: 2px solid #FFF;}
+	.usp { width: 247px;}
+	.usp:first-child { padding-left: 0;}
+	.usp:last-child { padding-right: 0; border-right: 0;}
+
+
+/* ==========================================================================
+	Footer
+========================================================================== */
+.ftr { padding: 46px 0 49px; color: #FFF; background: url("img/footer-bg.jpg") bottom center no-repeat #282828;}
+	.ftr_cls h4,
+	.ftr_cls h6 { text-transform: uppercase;}
+	.ftr_cls h4 { margin-bottom: 14px; font-family: 'Yanone Kaffeesatz', sans-serif;}
+	.ftr_cls h6 { margin-bottom: 13px;}
+	.ftr_cls ul {  list-style: none; margin-bottom: 12px;}
+	.ftr_cls li,
+	.ftr_cls p { font-size: 13px; line-height: 16px;}
+	.ftr_cls a { color: #FFF;}
+	.ftr_cls a:hover { text-decoration: underline;}
+
+		.ftr_training { float: left; margin-right: 38px; width: 200px;}
+		.ftr_equipment { float: left; width: 200px;}
+		.ftr_getintouch { float: right; text-align: right;}
+
+
+/* ==========================================================================
+	Homepage
+========================================================================== */
+.sldr { position: relative; margin-bottom: 7px; height: 366px; color: #FFF; background-color: #2E6BA3;}
+	.slides { width: 960px; height: 366px; overflow: hidden;}
+		/*.slide {}*/
+			.slide_content { float: left; padding: 54px 10px 0 34px;/*54px 34px 0*/ width: 235px; height: 366px; /*background: url("img/arrow-blue-right-nrw.png") right top no-repeat;*/}
+				.sldr h2 { margin-bottom: 7px;}
+				/*.sldr p { margin-bottom: 21px; font: 12px/15px 'Ubuntu', sans-serif;}*/
+				.btn_continue { padding-right: 94px;}
+			.sldr img { float: right; width: 725px;}
+
+	.coins { position: absolute; right: 0; bottom: 60px; padding: 14px 17px 4px; width: 102px; background-color: #003362; z-index: 5;}
+		.coins a { display: inline-block; margin: 0 1px; width: 14px; height: 14px; background: url("img/slide-coins.png") 0 0 no-repeat; vertical-align: top;}
+		.coins a.activeSlide { background-position: right top;}
+
+	.prev_next { position: absolute; right: 0; bottom: 20px; z-index: 5;}
+		.prev_next a { display: inline-block; margin-left: -4px; padding: 20px 25px 20px 26px; background-position: center center; background-repeat: no-repeat; vertical-align: top;}
+		.prev { background-image: url("img/arrow-blue-left.png"); background-color: #FFF;}
+		.next { background-image: url("img/arrow-white-right.png"); background-color: #2E6BA3;}
+
+
+.apprvd { margin-bottom: 7px; padding: 7px 0; text-align: center; background-color: #FFF;}
+	.apprvd h5 { margin-bottom: 9px; padding-right: 0; height: inherit;}
+
+
+.course_equip { margin-bottom: 7px; height: 208px; color: #545454;}
+	.course_equip h1 { margin-bottom: 7px;}
+	.course_equip h5 { margin-bottom: 22px;}
+
+	.view_courses,
+	.view_equip { display: inline-block; padding: 37px 0 0 22px; width: 475px; height: 208px; background-position: right top; background-repeat: no-repeat; background-color: #FFF; vertical-align: top;}
+	.view_courses { margin-right: 5px; background-image: url("img/view-courses.jpg");}
+	.view_equip { background-image: url("img/view-equipment.jpg");}
+
+
+.ltst_nws { margin-bottom: 7px; height: 113px; background-color: #FFF;}
+	.ltst_nws h2 { float: left; margin-right: 22px; padding: 40px 0 0 30px; width: 148px; height: 73px; color: #FFF; background-color: #003362;}
+	.ltst_nws h4 { margin: 19px 0 0; font-weight: 400; text-transform: capitalize; color: #6E6E6E;}
+	.ltst_nws p { color: #6E6E6E;}
+	.btn_readinfull { float: right; margin: 36px 23px; padding-right: 79px; background-image: url("img/arrow-white-right-tny.png"); background-position: 142px center; background-repeat: no-repeat;}
+
+
+.srvcs {}
+	.servc_blk { display: inline-block; margin-right: 2px; height: 445px; text-align: center; color: #545454; background-color: #FFF; vertical-align: top;}
+	.servc_blk:last-child { margin-right: 0;}
+		.servc_blk img { display: block; margin-bottom: 41px;}
+		.servc_blk h3 { margin-bottom: 0;}
+		.servc_blk h5 { margin-top: -3px;}
+	.servc_blk:hover { color: #FFF; background-color: #2E6BA3;}
+
+
+/* ==========================================================================
+	Clinical Governance page
+========================================================================== */
+.page_hero { margin-top: 21px; height: 210px; overflow: hidden;} /* why this has a different top-gap to other pages, I don't know */
+	.page_hero .slide_content { padding-top: 46px;}
+	.page_hero h1 { font-size: 29px;}
+	.page_hero p {}
+
+
+.page_content { padding-top: 30px;}
+	.left_col { float: left; padding-right: 23px; width: 475px;}
+	.right_col { float: right; padding-right: 39px; width: 478px;}
+	.page_content h1 { font-size: 33px; color: #2E6BA3;}
+	.page_content a { color: #2E6BA3;}
+
+	/* Why do headings change size here? */
+	.wysiwyg {}
+		.wysiwyg h1 { margin-bottom: 0; font-size: 33px; color: #2E6BA3;}
+		.wysiwyg h3 { margin-bottom: 41px;/*46px*/ font: 700 17px/20px 'Ubuntu', sans-serif; text-transform: none;}
+		.wysiwyg h4 { margin-bottom: 39px; font: 15px/17px 'Ubuntu', sans-serif; text-transform: none;}
+		.wysiwyg p a { font-weight: bold; color: #2E6BA3;}
+		
+
+/* ==========================================================================
+	Approving Bodies page
+========================================================================== */
+.page-template-my-templatesapproving-bodies-php .slide_content { padding-right: 6px;}
+
+.approving_bodies {}
+	.single_company { margin-bottom: 7px; background-color: #FFF;}
+		.company_text { float: right; padding: 23px 60px 0 30px; width: 509px;}
+			.company_text h2 { margin-bottom: 9px; font-size: 33px; color: #2E6BA3;}
+		.company_logo { display: table-cell; vertical-align: middle; width: 450px; height: 183px; text-align: center;}
+
+
+/* ==========================================================================
+	Our Facilities page
+========================================================================== */
+.facility_block { margin-bottom: 7px; background-color: #FFF;}
+	.facility_img { float: left; margin-right: 10px;}
+	.facility_img.ext { float: right; margin-left: 10px; margin-right: 0;}
+		.facility_img img { display: block;}
+	.facility_text { padding: 13px 6px 0;}
+	.facility_text.ext { text-align: right;}
+		.facility_text h2 { margin-bottom: 10px; font-size: 33px; color: #2E6BA3;}
+		.facility_text h4 { margin-bottom: 18px; font-size: 16px; line-height: 20px; color: #505050;}
+
+
+/* ==========================================================================
+	Our Staff page
+========================================================================== */
+.our_staff {}
+	.staff_block { display: inline-block; margin-right: 4px; margin-bottom: 7px; width: 234px; vertical-align: top;}
+	.staff_block:nth-of-type(4n) { margin-right: 0;}
+		.staff_photo { display: block; margin-bottom: 9px;}
+		.staff_block h3 { margin-bottom: 2px; color: #2E6BA3;}
+		.staff_block h5 { margin-bottom: 8px; font-weight: 700; font-size: 16px; line-height: 20px; color: #505050;}
+		.staff_block p {}
+
+
+/* ==========================================================================
+	Equipment Homepage [Shop]
+========================================================================== */
+.dlvry_pymnt { margin-bottom: 7px; padding: 7px 0; text-align: left; background-color: #FFF;}
+	.free_delivery,
+	.payment_options { display: inline-block; vertical-align: top;}
+
+	.free_delivery { padding: 18px 0 0 35px; width: 483px;}
+		.free_delivery h5 { display: inline-block; margin: 9px 52px 0 0; font-size: 21px; line-height: 21px; color: #2E6BA3; letter-spacing: 0.25em; vertical-align: top;}
+		.free_delivery img {}
+	.payment_options { padding: 16px 0 0;}
+		.payment_options h5 { margin: 0 0 5px 5px; font-size: 17px; line-height: 21px; color: #2E6BA3; letter-spacing: 0.25em;}
+		.payment_options img { display: block;}
+
+
+.equip_cats { list-style: none;}
+	.term-equipment li.product-category { display: inline-block; margin: 0 0 12px 0; width: 240px; text-align: center; color: #FFF; vertical-align: top;}
+	.term-equipment li.product-category.last { margin-right: -4px;}
+		.term-equipment li.product-category a { display: table; color: #FFF;}
+			.term-equipment li.product-category img { display:block; margin-bottom: 0; border-bottom-width: 21px; border-bottom-style: solid;}
+			.term-equipment li.product-category h3 { margin-bottom: 0; padding-top: 10px; width: 100%; height: 75px; text-align: center; background: url("img/shop-cat-bg.png") 238px center no-repeat #2E6BA3;}
+			mark.count { display: none;}
+
+	/* colour strips and hovers */
+	li.product-category:hover h3 { background-image: none;}
+	li.product-category:nth-of-type(1) img { border-bottom-color: #FEB22B;}
+	li.product-category:nth-of-type(1):hover h3 { background-color: #FEB22B;}
+	li.product-category:nth-of-type(2) img { border-bottom-color: #F37423;}
+	li.product-category:nth-of-type(2):hover h3 { background-color: #F37423;}
+	li.product-category:nth-of-type(3) img { border-bottom-color: #EC2920;}
+	li.product-category:nth-of-type(3):hover h3 { background-color: #EC2920;}
+	li.product-category:nth-of-type(4) img { border-bottom-color: #8D0028;}
+	li.product-category:nth-of-type(4):hover h3 { background-color: #8D0028;}
+	li.product-category:nth-of-type(5) img { border-bottom-color: #D00D81;}
+	li.product-category:nth-of-type(5):hover h3 { background-color: #D00D81;}
+	li.product-category:nth-of-type(6) img { border-bottom-color: #6D1B73;}
+	li.product-category:nth-of-type(6):hover h3 { background-color: #6D1B73;}
+	li.product-category:nth-of-type(7) img { border-bottom-color: #024C8D;}
+	li.product-category:nth-of-type(7):hover h3 { background-color: #024C8D;}
+	li.product-category:nth-of-type(8) img { border-bottom-color: #03A3EC;}
+	li.product-category:nth-of-type(8):hover h3 { background-color: #03A3EC;}
+	li.product-category:nth-of-type(9) img { border-bottom-color: #6FBA3A;}
+	li.product-category:nth-of-type(9):hover h3 { background-color: #6FBA3A;}
+	li.product-category:nth-of-type(10) img { border-bottom-color: #BDC91F;}
+	li.product-category:nth-of-type(10):hover h3 { background-color: #BDC91F;}
+	li.product-category:nth-of-type(11) img { border-bottom-color: #009589;}
+	li.product-category:nth-of-type(11):hover h3 { background-color: #009589;}
+	li.product-category:nth-of-type(12) img { border-bottom-color: #C9A31F;}
+	li.product-category:nth-of-type(12):hover h3 { background-color: #C9A31F;}
+
+
+.content_equip { margin-bottom: 10px; padding: 23px 150px 6px; text-align: center; border-top: 2px solid #EBEBEB; border-bottom: 2px solid #EBEBEB;}
+	.content_equip h2 { margin-bottom: 19px; color: #2E6BA3;}
+	.content_equip p { margin-bottom: 15px; color: #505050;}
+
+
+.mlnglst { background-color: #2E6BA3;}
+	.mailing_list { padding: 9px 0; text-align: right;}
+		.mailing_list h4 { display: inline-block; margin: 2px 17px 0 0; font-family: 'Yanone Kaffeesatz', sans-serif; color: #FFF; text-transform: uppercase; vertical-align: top;}
+		.mailinglist_form { display: inline-block; vertical-align: top;}
+			.mailinglist_form input[type="text"] { padding: 0 11px; width: 225px; height: 31px; font-size: 13px; color: #4D4F4F; background-color: #FFF; border: 0; vertical-align: top; -webkit-border-radius: 5px; border-radius: 5px;}
+			.btn_submit_mailing { width: 37px; height: 31px; background: url("img/arrow-white-right.png") center center no-repeat #003362; border: 0;}
+
+
+/* ==========================================================================
+	Equipment Category
+========================================================================== */
+.cat_hero { height: 210px;}
+	.cat_hero .slide_content { padding: 25px 34px 0; height: 210px; border-bottom: 7px solid #FEB22B;}
+
+
+.sort_prods { margin-bottom: 7px; text-align: right;}
+	.sort_products { width: 206px; height: 25px; font-size: 12px;}
+
+
+.prod_list {}
+	.prod_item_ovrvw { position: relative; display: inline-block; margin: 0 4px 4px 0; width: 234px; vertical-align: top; background-color: #EFEFEF;}
+	.prod_item_ovrvw:nth-of-type(4n) { margin-right: 0;}
+		/* overlay(s) */
+		.best_seller { position: absolute; right: -4px; top: 7px; padding: 6px 35px 0 0; width: 72px; height: 38px; text-align: right; font: 700 14px/14px 'Yanone Kaffeesatz', sans-serif; color: #FFF; text-transform: uppercase; background: url("img/icon-bestseller.png") 45px center no-repeat #67B329;}
+		.best_seller:after { position: absolute; right: 0px; top: -4px; content: ""; width: 0px; height: 0px; border-style: solid; border-width: 4px 0 0 4px; border-color: transparent transparent transparent #96d166;}
+
+		.prod_img { display: block;}
+
+		.prod_brief { padding: 10px;}
+			.prod_brief p { margin-bottom: 3px;}
+			.prod_title { max-width: inherit; font: 700 20px 'Yanone Kaffeesatz', sans-serif; color: #2E6BA3; text-transform: uppercase;}
+			.prod_summary { font-size: 10px; line-height: 12px;}
+			.prod_item_ovrvw .prod_price { margin-bottom: 0; text-align: left; font: 700 41px 'Yanone Kaffeesatz', sans-serif; color: #2E6BA3;}
+
+		.btn_viewproduct { width: 234px; background: url("img/arrow-white-right-tny.png") 211px center no-repeat #8FB74B;}
+
+
+/* ==========================================================================
+	Equipment Sub Category / Loop
+========================================================================== */
+.tax-product_cat { background-color: #E2E2E2;}
+	.tax-product_cat .hdr_cont { background-color: #FFF;}
+
+.sub_category_hero {}
+
+.woocommerce-result-count { display: none;}
+
+.woocommerce-ordering { margin-bottom: 13px; text-align: right;}
+	.woocommerce-ordering select { padding: 0 6px; height: 27px; font-size: 12px; color: #575757; border: 1px solid #CACACA; border-radius: 3px;
+		background: #FEFEFE; /* Old browsers */ 
+		background: -moz-linear-gradient(top, #FEFEFE 0%, #E4E4E4 100%); /* FF3.6+ */ 
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#E4E4E4)); /* Chrome,Safari4+ */ 
+		background: -webkit-linear-gradient(top, #FEFEFE 0%,#E4E4E4 100%); /* Chrome10+,Safari5.1+ */ 
+		background: -o-linear-gradient(top, #FEFEFE 0%,#E4E4E4 100%); /* Opera 11.10+ */ 
+		background: -ms-linear-gradient(top, #FEFEFE 0%,#E4E4E4 100%); /* IE10+ */ 
+		background: linear-gradient(to bottom, #FEFEFE 0%,#E4E4E4 100%); /* W3C */ 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FEFEFE', endColorstr='#E4E4E4',GradientType=0 ); /* IE6-9 */
+	}
+
+/* product in loop */
+ul.products { list-style: none; margin-bottom: 30px;}
+	ul.products li.product { position: relative; display: inline-block; margin-right: 1px; margin-bottom: 5px; padding-top: 0; width: 236px; vertical-align: top; background-color: #EFEFEF;}
+	ul.products li.product:nth-of-type(4n) { margin-right: 0;}
+		ul.products li.product a { display: block;}
+		ul.products li.product a img { max-width: 236px; background-color: #FFF;}
+
+	/* sale tag (no best seller option) */
+	.onsale { display: block; position: absolute; right: -4px; top: 7px; padding: 0 35px 0 10px; width: 28px; height: 38px; font: 700 14px/15px 'Yanone Kaffeesatz', sans-serif; color: #FFF; text-transform: uppercase; background: url("img/icon-star.png") 46px 8px no-repeat #67B329; z-index: 1;}
+	.onsale:before { content: ""; position: relative; left: 59px; top: -4px; display: block; width: 0; height: 0; border-color: transparent transparent transparent #96D166; border-style: solid; border-width: 4px 0 0 4px;}
+	/* if on sale */
+	.onsale { line-height: 28px; letter-spacing: 0.07em;}
+
+	/* product content (see /woocommerce/loop/price.php) */
+	ul.products li.product h3 { margin: 3px 10px 3px; min-height: 48px; font-size: 20px; color: #2E6BA3;}
+	li.product .product_code { margin: 0 10px 4px; font-weight: bold; color: #4E4E4E;}
+	li.product .the_excerpt { margin: 0 10px -4px; font-size: 10px; line-height: 13px; color: #505050;}
+	li.product .price { margin: 0 10px 9px; font: 700 41px 'Yanone Kaffeesatz', sans-serif; color: #2E6BA3;}
+		.price del { font-size: 20px;}
+		.price ins { text-decoration: none;}
+
+	a.btn_viewproduct { margin-bottom: 0; width: 236px; background-position: 212px center;}
+
+
+
+/* ==========================================================================
+	Equipment Product
+========================================================================== */
+.single-product { background-color: #E2E2E2;}
+	.single-product .hdr_cont { background-color: #FFF;}
+
+.product-cat-equipment { padding-top: 9px;}
+
+	.prod-images_prod-summary {}
+		.prod_images, 
+		.prod_summary, 
+		.prod_information, 
+		.product_reviews { display: inline-block; margin-bottom: 20px; width: 475px; vertical-align: top;}
+		.prod_images { margin-right: 5px; background-color: #FFF;}
+		.prod_summary { min-height: 529px; background-color: #EFEFEF;}
+
+			/*** Featured Images and Thumbnails ***/
+			div.images { float: none; margin: 0; width: 100%; padding: 13px;}
+				div.images img { box-shadow: none;}
+				div.images .thumbnails { padding-top: 13px;}
+					.images .thumbnails a { display: inline-block; margin-right: 3.8%; width: 30.75%; vertical-align: top;}
+					.images .thumbnails a.last { margin-right: 0;}
+					.images .thumbnails a img { display: block; width: 100%; height: auto;}
+
+			/*** Product Information - to the right ***/
+			.prod_summary h1 { margin: 11px 0 4px 27px; font: 700 29px 'Yanone Kaffeesatz', sans-serif; color: #2E6BA3; text-transform: uppercase;}
+			.sku_wrapper {margin: 1px 0 8px 27px;}
+			.sku_wrapper, 
+			.stock { font-weight: 700;}
+			.stock { display: inline-block; margin: 0 0 9px; padding: 3px 26px; font-size: 12px; color: #FFF; background-color: #8FB74B;}
+
+			/* tabs */
+			ul.tabs { list-style: none; margin: 0 10px; height: 37px; width: 450px;}
+				ul.tabs li { position: relative; float: left; cursor: pointer; padding: 0px 24px; height: 37px; line-height: 37px; font-weight: 700; font-size: 12px; background-color: #666; color: #FFF; overflow: hidden; -webkit-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0;}
+				.tab_last {}
+				ul.tabs li:hover { background-color: #C2C2C2;}
+				ul.tabs li.active { display: block; background-color: #2E6BA3;}
+			.tab_container { /*clear: both; float: left;*/ width: 450px; background: #FFF; overflow: auto;}
+				.tab_content { display: none; padding: 26px 33px;}
+				.tab_drawer_heading { display: none;}
+					.desc_readmore { font-size: 14px; color: #2E6BA3;}
+
+	/*** quantity | price | add to cart ***/
+	.cart_elements { padding: 78px 10px 10px;}
+		.quantity.buttons_added { float: right; margin-right: 20px;}
+		.cart_elements .price { float: right; margin-bottom: 11px; height: 28px; text-align: right; line-height: 22px; font-weight: 700; font-size: 33px; color: #8EB74B;}
+		form.cart { margin-bottom: 0;}
+			.btn_addtobasket { clear: both; width: 100%; height: 61px; text-align: center; font-size: 28px; background-image: url("img/icon-addtobasket.png"); background-position: 127px center; background-color: #8FB74B;}
+
+
+	.prod-info_prod-reviews, 
+	.related_products { padding-top: 13px; border-top: 2px solid #EBEBEB;}
+		
+		.prod-info_prod-reviews h2, 
+		.related_products h2 { margin-bottom: 15px; color: #2E6BA3;}
+		
+		/* Product Information */
+		.prod_information { margin-right: 5px; padding: 0 5px; width: 470px;}
+			.prod_information p:first-child { font-size: 16px; line-height: 20px;}
+			/* Product Resarch and News */
+			.prod_research_news { padding: 12px 60px 0; text-align: center; background-color: #FFF; border: 7px solid #2E6BA3;}
+				.prod_research_news h3 { margin-bottom: 9px; font-size: 29px; color: #2E6BA3;}
+				.prod_research_news p { margin-bottom: 11px;}
+				.prod_research_news .readmore { font-weight: 700; color: #515151;}
+
+		
+		/* Product Reviews */
+		.product_reviews { padding: 0 5px; width: 470px;}
+			.woocommerce-tabs ul.tabs { display: none;}
+			/* tabs have disabled in functions.php | template looks at /single-product/tabs.php then root/single-product-reviews.php */
+				.review_comments { color: #605F5F;}
+					.commentlist { list-style: none;}
+					.commentlist li { position: relative; margin-bottom: 23px; padding: 9px 17px 10px; background-color: #F7F7F7; -webkit-border-radius: 10px; border-radius: 10px;}
+					.commentlist li:after { content: ''; position: absolute; right: 17px; bottom: -11px; width: 0px; height: 0px; border-style: solid; border-width: 11px 6.5px 0 6.5px; border-color: #FFF transparent transparent transparent;}
+
+						.avatar { display: none;}
+						.comment-text { margin-left: 0;}
+						.meta { margin-bottom: 3px; font-size: 16px;}
+						.description p { margin-bottom: 0;}
+					
+						/* Star Rating */
+						@font-face { font-family: star; src: url(fonts/star.eot); src: url(fonts/star.eot?#iefix) format('embedded-opentype'), url(fonts/star.woff) format('woff'), url(fonts/star.ttf) format('truetype'), url(fonts/star.svg#star) format('svg'); font-weight: 400; font-style: normal;}
+						.star-rating { float: none; position: relative; margin-bottom: 4px; width: 87px; height: 16px; line-height: 16px; font-size: 16px; font-family: star; overflow: hidden;}
+						.star-rating:before { content: "\53\53\53\53\53"; position: absolute; left: 0; top: 0; float: left; color: #E2E2E2;}
+							.star-rating span { position: absolute; top: 0; left: 0; float: left; padding-top: 24px; overflow: hidden;}
+							.star-rating span:before { content: "\53\53\53\53\53"; position: absolute; left: 0; top: 0; color: #DDC437;}
+						
+				#review_form_wrapper {}
+
+					/* Add a review - Star rating */
+					p.stars { position: relative;}
+					p.stars a { display: inline-block; font-weight: 700; margin-right: 1em; text-indent: -9999px; position: relative;}
+					p.stars a:last-child { border-right: 0;}
+					p.stars a.star-1, 
+					p.stars a.star-2, 
+					p.stars a.star-3, 
+					p.stars a.star-4, 
+					p.stars a.star-5 { border-right: 1px solid #ccc;}
+					p.stars a.star-1:after, 
+					p.stars a.star-2:after, 
+					p.stars a.star-3:after, 
+					p.stars a.star-4:after, 
+					p.stars a.star-5:after { font-family: star; text-indent: 0; position: absolute; top: 0; left: 0; color: #CCC;}
+					p.stars a.star-1 { width: 24px;}
+					p.stars a.star-1:after { content: "\53";}
+					p.stars a.star-1.active:after, 
+					p.stars a.star-1:hover:after { content: "\53"; color: #DDC437;}
+					p.stars a.star-2 { width: 36px;}
+					p.stars a.star-2:after { content: "\53\53";}
+					p.stars a.star-2.active:after, 
+					p.stars a.star-2:hover:after { content: "\53\53"; color: #DDC437;}
+					p.stars a.star-3 { width: 48px;}
+					p.stars a.star-3:after { content: "\53\53\53";}
+					p.stars a.star-3.active:after, 
+					p.stars a.star-3:hover:after { content: "\53\53\53"; color: #DDC437;}
+					p.stars a.star-4 { width: 60px;}
+					p.stars a.star-4:after { content: "\53\53\53\53";}
+					p.stars a.star-4:hover:after { content: "\53\53\53\53"; color: #DDC437;}
+					p.stars a.star-5 { width: 72px; border: 0;}
+					p.stars a.star-5:after { content: "\53\53\53\53\53";}
+					p.stars a.star-5:hover:after { content: "\53\53\53\53\53"; color: #DDC437;}
+
+					.comment-form label { padding-right: 10px;}
+					.comment-form #submit { display: inline-block; padding: 8px 13px; height: 41px; text-align: left; font: 700 20px 'Yanone Kaffeesatz', sans-serif; color: #FFF; text-transform: uppercase; background-color: #62AE2A;/*green*/ background-repeat: no-repeat; vertical-align: top; border: 0; border: none;}
+
+	
+	/* Related Products */
+	.related_products { margin-bottom: 10px; padding-bottom: 18px; /*padding-left: 5px;*/ border-bottom: 2px solid #EBEBEB;}
+
+
+/* ==========================================================================
+	Training Courses : Home / Categories
+========================================================================== */
+.shrng { text-align: right; background-color: #E2E2E2;}
+	.sharing_btns { float: right; display: block; padding: 4px 12px 7px 11px; background-color: #FFF;}
+		.fb-like { display: inline-block; vertical-align: middle;}
+		.twitter-share-button { display: inline-block; vertical-align: middle;}
+		#___plusone_0 { vertical-align: middle!important;}
+
+
+.course_hero {}
+	.course_hero .slides { height: 211px;}
+	.course_hero .slide_content { border-bottom: 0;}
+
+
+.course_list {}
+	.course_item_ovrvw { display: inline-block; margin: 0 1px 4px 0; width: 316px; height: 301px; text-align: center; background-color: #FFF; vertical-align: top;}
+		.course_img { display: block;}
+		.course_cat_title { margin: 14px 0 24px; font-size: 31px; color: #2E6BA3;}
+		.course_cat_desc { display: none; color: #FFF;}
+		.btn_viewcourses { margin-bottom: 14px; padding: 12px; width: 197px; height: 49px; background: url("img/arrow-white-right-tny.png") 174px center no-repeat #6AB629;}
+
+	/* Hover state */
+	.childmoved { margin-bottom: 0; height: 305px; background-color: #2E6BA3;}
+		.childmoved .course_cat_title { color: #FFF;}
+
+	/* List of Courses */
+	.course_extd { margin: 0 0 7px; padding-top: 34px; width: 100%; text-align: left; height: 100%; overflow: hidden; background: #2E6BA3;}
+		.course_extd_innr { position: relative; margin: 0 auto; padding: 33px 20px 0; width: 960px; background-color: #FFF;}
+			/* functions */
+			.close { position: absolute; right: 0; top: -33px; padding: 12px 21px; width: 8px; height: 8px; background: url("img/icon-close.png") center center no-repeat;}
+			.js .course_extd { display: none;}
+			.courses-viewpane { margin-bottom: 8px; padding-top: 34px; background-color: #2E6BA3;}
+			.courses-viewpane .course_extd_innr { position: relative;}
+			.is-hidden { display: none;}
+			/* content */
+			.list_of_courses {}
+				.course_title, 
+				.course_price, 
+				.btn_moreinfo { display: inline-block; margin-right: -3px; vertical-align: top;}
+				.course_title { margin-top: -5px; margin-bottom: 29px; padding-right: 50px; width: 476px; height: 50px; font-size: 20px; line-height: 25px; text-transform: uppercase; font-family: 'Yanone Kaffeesatz', sans-serif; color: #4D4D4D;}
+				.course_price { margin: 0 14px 29px 0; padding-top: 4px; width: 160px; text-align: right; font-weight: 700; font-size: 37px; line-height: 15px; color: #444;}
+					.course_vat { font-size: 9px;}
+				.btn_moreinfo { width: 217px; background: url("img/arrow-white-right-tny.png") 190px center no-repeat #6AB629;}
+
+
+/* ==========================================================================
+	Training Courses : Products
+========================================================================== */
+
+/* breadcrumbs - hide 'courses' from the breadcrumb list */
+.course_subs a:first-child { display: none;}
+
+.prod-cat-courses .slide_content h1 { font-size: 29px;}
+
+.course_ovrvw { margin-bottom: 7px; background-color: #FFF;}
+	
+	.course_ovrvw_cntnt { float: left; padding: 23px 27px; width: 710px; height: 214px;}
+		.course_ovrvw_cntnt h3 { margin-bottom: 11px; font-size: 23px; color: #075DA3;}
+		.criteria { margin-bottom: 8px; font-style: italic; color: #075DA3;}
+		.course_ovrvw_cntnt h4 { margin-bottom: 15px; font-weight: 400; line-height: 25px; color: #747474;}
+		p.lrg { margin-bottom: 0; font-size: 16px; line-height: 18px; color: #747474;}
+	
+	.viewdates_bookcourse { position: relative; float: right; width: 233px; height: 214px; padding: 88px 20px 0 96px; font: 700 20px 'Yanone Kaffeesatz', sans-serif; color: #FFF; text-transform: uppercase; letter-spacing: 0.01em; background: url("img/arrow-white-down.png") 207px 124px no-repeat #075DA3; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+		.viewdates_bookcourse img { position: absolute; left: 26px; top: 78px;}
+
+
+.crs_tbs { margin-bottom: 7px;}
+	ul.course_tabs { list-style: none; height: 43px; width: 100%;}
+		ul.course_tabs li { position: relative; float: left; cursor: pointer; margin-right: 2px; padding: 0 43px 0 42px; height: 100%; line-height: 43px; font-weight: 700; font-size: 13px; color: #003362; background-color: #FFF; overflow: hidden;}
+		ul.course_tabs li:hover {}
+		ul.course_tabs li.active { display: block; color: #FFF; background-color: #003362;}
+		ul.course_tabs li:last-child { margin-right: 0;}
+	.course_tab_cont { padding-right: 8px 0; width: 100%; text-align: center; background: #FFF; border-top: 8px solid #003362; overflow: auto;}
+		.course_tab_cont .tab_content { padding-bottom: 0;}
+		.course_tab_cont h2 { margin-bottom: 13px; color: #075DA3;}
+		.course_tab_cont p { margin-bottom: 20px; font-size: 16px; line-height: 18px; color: #747474;}
+
+
+.course_dates { margin-bottom: 7px; padding: 11px 8px; background-color: #FFF;}
+	.course_dates h2 { margin-bottom: 21px; text-align: center; color: #2E6BA3;}
+
+	.crs_dts_tbl { margin-bottom: 22px;}
+		.crs_dts_tbl th { padding: 10px 17px; text-align: left; font-size: 14px; color: #FFF; background-color: #2E6BA3;}
+		.crs_dts_tbl th:last-child {}
+		.crs_dts_tbl tr:nth-child(odd) td { background-color: #F7F7F7;}
+		.crs_dts_tbl td { padding: 9px 17px; color: #D0D0D0;}
+		.crs_dts_tbl tr:hover td { color: #5A5A5A; cursor: pointer;}
+		.crs_dts_tbl td:last-child { text-align: right;}
+			.btn_selectdate { width: 193px; background-image: url("img/arrow-white-right-tny.png"); background-position: 168px center; background-color: #2E6BA3;}
+			.btn_selectdate:hover { background-color: #1A5286;}
+
+
+.crs_slctd_book {}
+	.course_selected { float: left; padding-right: 50px; width: 475px;}
+		.course_selected p.lrg {}
+		.course_selected h2 { margin-bottom: 1px; text-align: left; color: #3E3E3E;}
+	
+	.book_course { float: right; width: 467px; text-align: right;}
+		.book_course p.lrg { float: left; margin-top: 18px;}
+		.book_course .course_price { margin-right: 4px; margin-bottom: 3px; width: 230px; font-size: 48px; line-height: 25px; color: #8EB74B;}
+			.course_vat { color: #B72E06;}
+		.btn_clicktobookcourse { margin-top: 20px; height: 87px; line-height: 71px; background-position: 98px center; background-color: #8EB74B;}
+		.btn_clicktobookcourse:hover { background-color: #A1Cf55;}
+
+
+.course_location { padding: 17px 118px; background-color: #FFF;}
+	.course_map { margin-bottom: 32px; width: 100%; height: 382px;}
+	.course_address { font-size: 13px; line-height: 18px;}
+		.course_address a { font-weight: 700; color: #2E6BA3;}
+		.map_pin { padding-left: 17px; background: url("img/icon-pin.png") left center no-repeat;}
+
+
+/*** let's hide the stuff we don't want to show ***/
+.book_course h1.product_title.entry-title, 
+.book_course .price .amount, 
+.book_course div[itemprop="description"], 
+.book_course table.variations, 
+.book_course div.single_variation, 
+.book_course .product_meta { display: none; outline: 1px solid #f0f}
+
+
+/* ==========================================================================
+	Basket / Cart
+========================================================================== */
+.page-id-101 .page_content, 
+.page-id-102 .page_content, 
+.woocommerce-page .page_content { margin: 20px auto 10px; padding: 74px 80px 40px; background-color: #FFF;}
+
+/*.woocommerce-page .full_width { margin-top: 21px; padding: 74px 79px; background-color: #FFF;}*/
+
+	.woocommerce-message { margin-bottom: 21px; font: 400 12px/15px 'Ubuntu', sans-serif;}
+
+	.shop_table, 
+	.cart_totals table, 
+	.shipping_calculator { width: 100%;}
+	.shop_table { margin-top: 31px;}
+
+		/* main cart table */
+		.shop_table thead { display: none;}
+			.shop_table tbody, 
+			.cart_item { border-bottom: 1px solid #DCDCDC;}
+			.shop_table td { vertical-align: baseline; padding: 10px 10px 15px;}
+			
+			td.product-name { /*vertical-align: top;*/}
+				.product-name a { font: 700 20px 'Yanone Kaffeesatz', sans-serif; color: #4D4D4D; text-transform: uppercase;}
+			.variation {}
+				.variation-CourseDateTime { font-weight: 700;}
+			
+			.product-quantity { width: 143px;}
+				.product-quantity p { /*float: left; margin: 0 4px 0 0;*/ padding-top: 4px; font-weight: 700;}
+				.product-quantity p, 
+				.quantity.buttons_added { float: none; display: inline-block; margin-right: 0; vertical-align: baseline;}
+					.quantity.buttons_added input { border: 1px solid #E2E2E2; background-color: #FFF;}
+					.quantity.buttons_added input.qty { width: 40px;}
+			
+			.product-remove {}
+				.product-remove a { display: block; padding: 9px 0 0 24px; font-size: 12px; color: #5A5A5A; background: url("img/icon-basket.png") 0 0 no-repeat;}
+			
+			.product-price { text-align: right;}
+				.product-price .course_price { margin: 0; padding-top: 0; width: auto;}
+				.product-price .course_vat { color: #444;}
+
+		/* cart subtotal etc */
+		.cart-collaterals {}
+			.cart_totals {}
+				.cart_totals h2 { display: none;}
+				.cart_totals table { text-align: right;}
+					.cart_totals tr,
+					.cart_totals td { vertical-align: text-bottom;}
+					.cart_totals tbody { border-bottom: 0;}
+					.cart_totals tbody tr { border-bottom: 0;}
+						.order-total { color: #6AB629;}
+						.order-total td { font-size: 37px;}
+
+		/* cart buttons / msg */
+		.cart_callus {}
+			.cart_callus p { margin-bottom: 15px;}
+			.cart_callus .xxl { font-weight: 700; font-size: 35px; color: #2E6BA3;}
+
+		.actions { text-align: right;}
+			.btn_checkoutlrg { padding-left: 69px; width: 395px; height: 75px; font-size: 24px; 
+				background: url("img/icon-addtobasket.png") 26px center no-repeat, url("img/arrow-white-right.png") 363px center no-repeat; 
+				background-color: #6AB629;
+			}
+
+
+/* ==========================================================================
+	Checkout
+========================================================================== */
+.woocommerce-checkout .wysiwyg h3, 
+.woocommerce-account .wysiwyg h3 { margin-bottom: 18px; color: #2E6BA3;}
+
+.woocommerce-billing-fields {}
+	.form-row { display: inline-block; margin-bottom: 15px; width: 398px; vertical-align: top;}
+		.form-row label { display: block; margin-bottom: 3px;}
+		.form-row input, 
+		.form-row select, 
+		.form-row textarea { padding: 10px; width: 395px; height: 33px; background-color: #E2E2E2; border: 1px solid #C7C7C7; border-radius: 2px;}
+		.form-row input[type="checkbox"] { display: inline-block; padding: 0; width: 20px; height: 20px; vertical-align: sub;}
+		.form-row label.checkbox { display: inline-block;}
+		.form-row textarea { padding: 10px; width: 100%; height: 100px;}
+
+#payment { margin-top: 30px;}
+	.payment_methods { list-style: none;}
+
+
+/* ==========================================================================
+	My Account
+========================================================================== */
+#colorbox .hdr_cont, 
+#colorbox .basket_cont, 
+#colorbox .nav, 
+#colorbox .brdcrmbs, 
+#colorbox .usps, 
+#colorbox .ftr { display: none;}
+
+#colorbox .main { background-color: #FFF;}
+	#colorbox .page_content { padding: 34px 0; width: 630px;}
+	#colorbox .page_content > h1 { display: none;}
+
+		/* My Account Lightbox : Login */
+		.post-103 { padding-left: 122px;}
+			.h2_login { padding-left: 30px; font-size: 25px; color: #2E6BA3; background: url("img/icon-myaccount-login.png") left center no-repeat;}
+			form.login { width: 395px;}
+				
+				form.login label { font-size: 15px; color: #3E3E3E;}
+				
+				form.login input[type="text"], 
+				form.login input[type="password"] { display: block; margin-bottom: 10px; padding: 17px 19px; width: 395px; font-size: 13px; color: #3E3E3E; background-color: #E2E2E2; border: 1px solid #C7C7C7;}
+				
+				form.login input[type="checkbox"] { display: inline; padding: 0; width: inherit;}
+				
+				.lost_password { float: left; padding-top: 50px; font-weight: 700;}
+					.lost_password a { font-size: 15px; color: #3E3E3E;}
+					.lost_password a:hover { text-decoration: underline;}
+				
+				form.login input[type="submit"] { float: right; padding-left: 28px; width: 194px; height: 69px; font-size: 29px; background-image: url("img/arrow-white-right.png"); background-position: 158px center;}
+
+/* logged in */
+.logged-in .post-103 { padding-left: 0;}
+
+/*.page-id-103 .page_content h1 { margin-bottom: -4px; font-size: 16px;}*/
+.page-id-103 .page_content h2 { /*font-size: 33px;*/ color: #2E6BA3;}
+
+.account_user h2 { float: left;}
+.account_user .btn_logout { float: right; background-color: #E54236; border-radius: 3px;}
+	.btn_logout a { color: #FFF!important;}
+	.btn_logout a:hover { color: #E5594F;}
+
+.btn_myaccount { padding: 0 80px; width: 100%; height: 100px; font-size: 29px; background-image: url("img/arrow-white-right.png"); background-position: 706px center;}

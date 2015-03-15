@@ -1,0 +1,11 @@
+
+# BEGIN WP Remote Backup
+# This .htaccess file ensures that other people cannot download your backup files.
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{QUERY_STRING} !key=95ca112afeb0ec1b2d1986d2e2f1f792
+RewriteRule (.*) - [F]
+</IfModule>
+
+# END WP Remote Backup

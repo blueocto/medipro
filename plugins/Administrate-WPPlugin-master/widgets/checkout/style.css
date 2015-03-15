@@ -1,0 +1,194 @@
+/* Checkout Widget */
+#administrate-checkout-reset {
+	float: right;
+	font-weight: normal;
+	line-height: 1.75em;	
+}
+#administrate-checkout .ui-tabs-nav {
+	list-style: none inside none;	
+	margin-left: 0;
+	margin-bottom: 0;
+}
+#administrate-checkout .ui-tabs-nav li {
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	margin-left: 0.25em;
+	background: #eee;
+}
+#administrate-checkout .ui-tabs-nav li.ui-state-disabled a {
+	color: #666;	
+}
+#administrate-checkout .ui-tabs-nav li.ui-state-active {
+	background: #fff;
+	font-weight: bold;
+}
+#administrate-checkout .ui-tabs-nav li a {
+	display: block;
+	line-height: 1.5em;
+	padding-left: 1em;
+	padding-right: 1em;	
+}
+#administrate-checkout .administrate-checkout-step,
+#administrate-checkout-complete
+{
+	border: 1px solid #ccc;
+	padding: 1em;
+	clear: both;
+}
+#administrate-checkout .administrate-checkout-step:after,
+#administrate-checkout-complete:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#administrate-checkout .ui-tabs-hide {
+	display: none;	
+}
+.administrate-checkout-step h3 {
+	clear: both;	
+}
+#administrate-checkout .administrate-btn {
+	float: right;
+	cursor: pointer;
+}
+
+/* Step 1 & Step 4 */
+#administrate-checkout-step-1 table,
+#administrate-checkout-step-4 table
+{
+	width: 100%;
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+#administrate-checkout-step-1 table th,
+#administrate-checkout-step-1 table td,
+#administrate-checkout-step-4 table th,
+#administrate-checkout-step-4 table td
+{
+	padding: 0.5em;
+}
+#administrate-checkout-step-1 table thead th,
+#administrate-checkout-step-4 table thead th
+{
+	border-bottom: 1px solid #ccc;
+	background: #eee;
+	text-align: left;
+	white-space: nowrap;
+}
+#administrate-checkout-step-1 table thead th .administrate-checkout-price-qualifier,
+#administrate-checkout-step-4 table thead th .administrate-checkout-price-qualifier
+{
+	font-size: 0.75em;
+	font-weight: normal;	
+}
+
+/* Step 2 */
+#administrate-checkout-buyer-is-attendee-field {
+	display: none;	
+}
+.administrate-js #administrate-checkout-buyer-is-attendee-field {
+	display: block;
+}
+#administrate-checkout fieldset {
+	margin-bottom: 1em;	
+}
+#administrate-checkout fieldset legend {
+	font-weight: bold;	
+}
+
+/* Step 3 */
+#administrate-checkout .administrate-checkout-terms {
+	margin-bottom: 2em;	
+}
+#administrate-checkout .administrate-checkout-accept-terms {
+	clear: both;
+	display: block;
+	font-weight: bold;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	cursor: pointer;
+}
+
+/* Step 4 */
+#administrate-checkout address span {
+	display: block;	
+}
+#administrate-checkout-payment h3 {
+	padding: 0;	
+}
+#administrate-checkout-payment h3 label {
+	display: block;
+	cursor: pointer;	
+}
+#administrate-checkout-step-4 table {
+	margin-top: 1em;
+	margin-bottom: 1em;	
+}
+#administrate-checkout-payment-processor-paypal input[type=image] {
+	float: right;	
+}
+
+/*! jQuery UI - v1.9.2 - 2012-11-28
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.accordion.css, jquery.ui.progressbar.css, jquery.ui.tabs.css
+* Copyright (c) 2012 jQuery Foundation and other contributors Licensed MIT */
+
+.ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{zoom:1}.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}.ui-state-disabled{cursor:default!important}.ui-icon{display:block;text-indent:-99999px;overflow:hidden;background-repeat:no-repeat}.ui-overlay{position:absolute;top:0;left:0;width:100%;height:100%}.ui-accordion .ui-accordion-header{display:block;cursor:pointer;position:relative;margin-top:2px;padding:.5em .5em .5em .7em;zoom:1}.ui-accordion .ui-accordion-icons{padding-left:2.2em}.ui-accordion .ui-accordion-noicons{padding-left:.7em}.ui-accordion .ui-accordion-icons .ui-accordion-icons{padding-left:2.2em}.ui-accordion .ui-accordion-header .ui-accordion-header-icon{position:absolute;left:.5em;top:50%;margin-top:-8px}.ui-accordion .ui-accordion-content{padding:1em 2.2em;border-top:0;overflow:auto;zoom:1}.ui-progressbar{height:2em;text-align:left;overflow:hidden}.ui-progressbar .ui-progressbar-value{margin:-1px;height:100%}.ui-tabs{position:relative;padding:.2em;zoom:1}.ui-tabs .ui-tabs-nav{margin:0;padding:.2em .2em 0}.ui-tabs .ui-tabs-nav li{list-style:none;float:left;position:relative;top:0;margin:1px .2em 0 0;border-bottom:0;padding:0;white-space:nowrap}.ui-tabs .ui-tabs-nav li a{float:left;padding:.5em 1em;text-decoration:none}.ui-tabs .ui-tabs-nav li.ui-tabs-active{margin-bottom:-1px;padding-bottom:1px}.ui-tabs .ui-tabs-nav li.ui-tabs-active a,.ui-tabs .ui-tabs-nav li.ui-state-disabled a,.ui-tabs .ui-tabs-nav li.ui-tabs-loading a{cursor:text}.ui-tabs .ui-tabs-nav li a,.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a{cursor:pointer}.ui-tabs .ui-tabs-panel{display:block;border-width:0;padding:1em 1.4em;background:none}
+
+/* < 480px wide */
+@media only screen and (max-width: 479px) {
+	
+	/* header */
+	#administrate-checkout-reset {
+		float: none;
+		font-weight: normal;
+		line-height: 1.75em;
+	}
+	
+	/* tabs */
+	#administrate-checkout .ui-tabs-nav li {
+		display: block;
+		margin: 0;
+		margin-left: 0;
+		float: none;
+		clear: both;
+		height: 3em !important;
+	}
+	#administrate-checkout .ui-tabs-nav li a {
+		display: block;
+		line-height: 3em;
+		height: 100%;
+		padding-top: 0;
+		padding-bottom: 0;	
+	}
+	
+	/* Step 1 & Step 4 */
+	#administrate-checkout-step-1 table thead th,
+	#administrate-checkout-step-4 table thead th
+	{
+		white-space: normal;
+	}
+	.administrate-checkout-course-name,
+	.administrate-checkout-tax
+	{
+		display: none;	
+	}
+	#administrate-checkout-step-4 .administrate-field-values dt {
+		width: auto;
+		font-weight: bold;
+		float: none;
+		margin-bottom: 0;
+	}
+	#administrate-checkout-step-4 .administrate-field-values dd {
+		margin-left: 0;
+		margin-bottom: 1em;
+	}
+	
+	
+}

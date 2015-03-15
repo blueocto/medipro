@@ -1,0 +1,17 @@
+/* currency selector */
+.administrate-event-price-prices {
+	margin: 0;
+	list-style: none inside none;
+	display: inline-block;
+	padding-left: 0;
+}
+.administrate-event-price-prices li {
+	display: none;
+}
+.administrate-event-price-prices .administrate-selected {
+	display: inline-block;
+}
+.administrate-event-price {
+	position: relative;
+	top: -2px;
+}

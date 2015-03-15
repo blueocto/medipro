@@ -1,0 +1,30 @@
+/* event list */
+.administrate-event-list h3 {
+	margin-bottom: 1em;
+	margin-top: 1em;	
+}
+.administrate-event-list h3:first-child {
+	margin-top: 0;	
+}
+.administrate-event-list dl,
+.administrate-event-list ul
+{
+	margin: 0;
+	padding: 0;	
+}
+.administrate-event-list dt,
+.administrate-event-list dd,
+.administrate-event-list li
+{
+	margin-left: 0;
+	padding-left: 0;	
+}
+.administrate-event-list dt {
+	margin-top: 1em;	
+}
+.administrate-event-list dt:first-child {
+	margin-top: 0;	
+}
+.administrate-event-list dd {
+	margin-bottom: 0;	
+}

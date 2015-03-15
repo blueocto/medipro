@@ -1,0 +1,1 @@
+<p class="<?= $this->plugin->add_namespace('footer', '-'); ?>"><a href="http://www.GetAdministrate.com/" rel="nofollow" target="_blank"><?php _e('Powered by', 'administrate'); ?> <img src="<?= $this->plugin->get_url('/images/logo-public.png'); ?>"> <span><?php _e('Software for Training Providers', 'administrate'); ?></span></a></p>

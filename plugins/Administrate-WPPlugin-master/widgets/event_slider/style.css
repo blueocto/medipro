@@ -1,0 +1,81 @@
+/* event slider */
+.administrate-event-slider {
+	position: relative;
+}
+.administrate-event-slider .administrate-event-slider-slides {
+	height: 10em;
+	margin: 0;
+	list-style: none inside none;
+	overflow: hidden;	
+}
+.administrate-event-slider .administrate-event-slider-slides ul {
+	margin: auto 3em;
+	padding: 0;
+	height: 100%;
+	white-space: nowrap;
+	/*
+	overflow: auto;
+	overflow-y: hidden;
+	*/
+	overflow: hidden;
+	background: #eee;
+	border: 1px solid #ccc;
+	border-right: none;
+	-webkit-overflow-scrolling: touch;
+}
+.administrate-event-slider .administrate-event-slider-slides ul li {
+	display: inline-block;
+	height: 100%;
+	width: 25%;
+	border-right: 1px solid #ccc;
+	white-space: normal;
+	vertical-align: top;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+	padding: 1em;
+}
+.administrate-event-slider .administrate-event-slider-slides ul li dl {
+	margin: 0;	
+}
+.administrate-event-slider .administrate-event-slider-slides ul li dl dd {
+	margin-left: 0;
+	margin-bottom: 0;
+}
+.administrate-event-slider .administrate-event-slider-slides ul li .administrate-event-slider-book {
+	text-align: center;
+	margin: 0;
+}
+.administrate-event-slider .administrate-event-slider-slides ul li .administrate-event-slider-book a {
+	display: inline-block;
+	text-decoration: none;
+}
+.administrate-event-slider-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.administrate-event-slider-nav li {
+	position: absolute;
+	top: 4em;
+	width: 2em;
+	height: 2em;
+	background: transparent none no-repeat center center;
+	list-style: none inside none;	
+}
+.administrate-event-slider-nav .prev {
+	left: 0;
+	text-align: left;
+}
+.administrate-event-slider-nav .next {
+	right: 0;
+	text-align: right;
+}
+.administrate-event-slider-nav li a {
+	display: block;
+	line-height: 2.5em;
+	font-size: 2em;
+	text-decoration: none;
+	color: #999;
+}

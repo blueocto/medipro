@@ -1,0 +1,11 @@
+/* event */
+#administrate-event .administrate-event-menu {
+	list-style: none inside none;
+	margin: 0;
+}
+#administrate-event .administrate-event-menu .administrate-back {
+	float: left;	
+}
+#administrate-event .administrate-event-menu .administrate-register {
+	float: right;	
+}

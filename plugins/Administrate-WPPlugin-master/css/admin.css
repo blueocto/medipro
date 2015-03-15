@@ -1,0 +1,150 @@
+/* Format the admin menu icon */
+#toplevel_page_administrate_home .wp-menu-image {
+	background: transparent url("../images/icn-menu.png") no-repeat center center;
+	background-size: 14px 16px;
+}
+#toplevel_page_administrate_home.current .wp-menu-image {
+	background-image: url("../images/icn-menu-selected.png");
+}
+
+/* Remove the main Administrate link from the list */
+#toplevel_page_administrate_home .wp-first-item {
+	display: none;	
+}
+
+/* Format the options page */
+#AdministratePlugin {
+	padding-top: 1em;	
+}
+#AdministratePlugin .provider {
+	float: right;
+	line-height: 48px;
+	text-decoration: none;	
+}
+#AdministratePlugin h2 {
+	background: transparent url("../images/logo-admin.png") no-repeat left center;
+	background-size: auto 24px;
+	text-indent: -999em;
+}
+#AdministratePlugin .nav-tab-wrapper {
+	border-bottom: 1px solid #ccc;
+	padding-left: 0.5em;
+}
+#AdministratePlugin .nav-tab-wrapper li {
+	display: inline-block;
+	margin-bottom: 0;
+}
+#AdministratePlugin .nav-tab-wrapper li a {
+	font-size: 1.25em;
+	line-height: 2em;
+}
+#AdministratePlugin .nav-tab-wrapper li a.nav-tab-active {
+	font-weight: bold;
+}
+
+/* Format form-table */
+#AdministratePlugin .form-table > tbody > tr > th {
+	width: 12em;
+}
+#AdministratePlugin .form-table input[type=checkbox],
+#AdministratePlugin .form-table select
+{
+	cursor: pointer;	
+}
+#AdministratePlugin .form-table > tbody > tr > td label input {
+	margin-right: 0.5em;	
+}
+#AdministratePlugin .form-table > tbody > tr > td > .hint {
+	margin-left: 1em;
+	line-height: 3em;
+	color: #999;	
+}
+#AdministratePlugin .form-table > tbody > tr > td > .appendum {
+	margin-left: 0;	
+}
+#AdministratePlugin .form-table > tbody > tr > td > .wp-editor-wrap {
+	width: 99%;
+	margin-bottom: 0.75em;
+}
+
+/* Format subfield tables */
+#AdministratePlugin .widefat {
+	margin-bottom: 0.75em;
+	width: 99%;
+}
+#AdministratePlugin .widefat .check {
+	text-align: center;
+}
+#AdministratePlugin .widefat .long input,
+#AdministratePlugin .widefat .long textarea
+{
+	width: 30em;	
+}
+#AdministratePlugin .widefat td textarea {
+	height: 4em;	
+}
+#AdministratePlugin .widefat tbody .label {
+	width: 10em;	
+}
+.administrate-seo-table tbody td {
+	vertical-align: middle;	
+}
+
+/* course_field_labels table */
+#AdministratePlugin .course_field_labels input[type=text] {
+	width: 20em;
+}
+
+/* error_messages table */
+#AdministratePlugin .error_messages input[type=text] {
+	width: 30em;	
+}
+
+/* order logs table */
+#administrate-order-logs .administrate-order-step-1 .administrate-order-status,
+#administrate-order-logs .administrate-order-step-2 .administrate-order-status
+{
+	color: #f90;	
+}
+#administrate-order-logs .administrate-order-step-3 .administrate-order-status,
+#administrate-order-logs .administrate-order-step-4 .administrate-order-status
+{
+	color: #c00;	
+}
+#administrate-order-logs .administrate-order-step-5 .administrate-order-status,
+#administrate-order-logs .administrate-order-complete .administrate-order-status
+{
+	color: #090;	
+}
+
+/* order */
+#administrate-order h4 {
+	margin-bottom: 0.5em;
+	margin-top: 1.5em;
+}
+#administrate-order dl {
+	margin-top: 0;	
+}
+#administrate-order dl dt {
+	float: left;
+	width: 10em;	
+}
+
+/* home / help */
+.administrate-home h4,
+.administrate-help h4
+{
+	margin-bottom: 0;	
+}
+
+/* cache actions */
+.administrate-cache-action .button {
+	width: 103px;
+	margin-right: 1em;
+}
+
+/* debug actions */
+.administrate-debug-action .button {
+	width: 120px;
+	margin-right: 1em;
+}

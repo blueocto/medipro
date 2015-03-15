@@ -1,0 +1,125 @@
+/* general widget styles */
+.administrate-widget:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* footer branding */
+.administrate-footer {
+	padding-top: 1em;
+	text-align: center;
+	margin-bottom: 1em;
+}
+.administrate-footer a,
+.administrate-footer a span
+{
+	color: #666;
+	line-height: 1.25em;
+	display: block;
+	text-decoration: none;
+}
+.administrate-footer a:hover,
+.administrate-footer a:hover span
+{
+	text-decoration: none;
+}
+.administrate-footer a {
+	font-size: 15px;
+}
+.administrate-footer a img {
+	margin-left: -1px;
+	border: none;
+	vertical-align: baseline;
+	width: auto;
+	height: 12px;
+	float: none !important;
+}
+.administrate-footer a span {
+	font-size: 13px;
+	color: #ccc;
+}
+
+/* hidden */
+.administrate-hidden {
+	display: none;	
+}
+
+/* messages & errors */
+.administrate-msg {
+	color: #060;
+}
+.administrate-errors {
+	background: #fcc;
+	border: 1px solid #f99;
+	padding: 1em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+.administrate-errors p {
+	margin-bottom: 0;
+	font-weight: bold;
+}
+.administrate-errors ul {
+	margin: 0;
+	padding-left: 0;
+	list-style: none inside none;	
+}
+
+/* form field */
+.administrate-field {
+	clear: both;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;	
+}
+.administrate-field:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.administrate-field label {
+	float: left;
+	width: 8em;	
+	margin-right: 1em;
+	line-height: 2.5em;
+}
+.administrate-field-check label {
+	float: none;
+	width: auto;
+	margin-right: 0;
+	line-height: inherit;
+	cursor: pointer;
+}
+
+/* generic spinner overlay */
+.administrate-spinner {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff url('../images/spinner.gif') no-repeat center center;
+	background-color: rgba(255,255,255,0.75);	
+}
+
+/* field values */
+.administrate-field-values {
+	margin: 0;
+	margin-bottom: 1em;	
+}
+.administrate-field-values dt {
+	float: left;
+	width: 12em;
+	margin-right: 1em;
+	clear: left;
+	margin-bottom: 0.5em;
+}
+.administrate-field-values dd {
+	margin-bottom: 0.5em;
+	margin-left: 13em;	
+}

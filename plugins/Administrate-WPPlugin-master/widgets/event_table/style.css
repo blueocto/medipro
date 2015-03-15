@@ -1,0 +1,108 @@
+/* sort table styles for event table */
+#administrate-event-table form p {
+	line-height: 3em;	
+}
+.administrate-sort-filter-table > table > thead > tr > th .administrate-event-table-price-qualifier,
+.administrate-sort-filter-table > table > thead > tr > th .administrate-event-table-price-qualifier select
+{
+	color: #666;
+	font-size: 0.75em;	
+}
+.administrate-sort-filter-table > table > tbody > tr > td {
+	white-space: nowrap;
+}
+.administrate-sort-filter-table > table > tbody > tr > td > .administrate-event-table-course-link,
+.administrate-sort-filter-table > table > tbody > tr > .administrate-event-table-course-name
+{
+	white-space: normal;	
+}
+.administrate-sort-filter-table > table > thead > tr > th .administrate-event-table-price-qualifier,
+.administrate-sort-filter-table > table > tbody > tr > td > .administrate-event-table-register-link,
+.administrate-sort-filter-table > table > tbody > tr > td > .administrate-event-table-places-left,
+.administrate-sort-filter-table > table > tbody > tr > td > .administrate-event-table-sold-out,
+.administrate-sort-filter-table > table > tbody > tr > td > .administrate-event-table-available
+{
+	display: block;
+}
+.administrate-sort-filter-table > table > tbody > tr > td > .administrate-event-table-sold-out {
+	color: #c00;
+	text-transform: uppercase;
+}
+#administrate-event-table-pager {
+	float: left;
+	padding-top: 0.5em;
+	line-height: 1.25em;
+	margin-right: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	display: none; /* make Javascript show it so that it doesn't show for non-JS users */
+}
+#administrate-event-table-pager > a {
+	text-decoration: none;
+	font-weight: bold;
+	padding-left: 0.5em;
+	padding-right: 0.5em;	
+}
+#administrate-event-table-pager > .administrate-event-table-pager-status {
+	padding-left: 0.5em;
+	padding-right: 0.5em;	
+}
+#administrate-event-table-pager > .administrate-event-table-pager-disabled {
+	color: #999;	
+}
+#administrate-event-table > .administrate-footer {
+	float: right;
+	width: 13em;	
+}
+#administrate-event-table > .administrate-event-table-pricing-table .header,
+#administrate-event-table > .administrate-event-table-pricing-table .tablesorter-header {
+	background-position: 0 2em;
+}
+
+/* < 640px wide */
+@media only screen and (max-width: 639px) {
+	
+	/* adjust filter headers */
+	.administrate-sort-filter-table table thead th {
+		padding-left: 0.5em !important;	
+	}
+	#administrate-event-table > .administrate-event-table-pricing-table .header,
+	#administrate-event-table > .administrate-event-table-pricing-table .tablesorter-header {
+		background-image: none;
+	}
+	.administrate-sort-filter-table table thead th,
+	.administrate-sort-filter-table > table > tbody > tr > td
+	{
+		white-space: normal !important;
+	}
+	
+	/* hide course name */
+	.administrate-sort-filter-table .administrate-event-table-course-code {
+		display: none;
+	}
+
+}
+
+/* < 480px wide */
+@media only screen and (max-width: 479px) {
+	
+	/* hide course location */
+	.administrate-sort-filter-table .administrate-event-table-course-location {
+		display: none;
+	}
+	
+	/* pager adjustments */
+	#administrate-event-table-pager {
+		margin-right: 0;
+		float: none;
+		text-align: center;
+	}
+	
+	/* footer adjustments */
+	#administrate-event-table > .administrate-footer {
+		float: none;
+		text-align: center;
+		width: auto;
+	}
+	
+}

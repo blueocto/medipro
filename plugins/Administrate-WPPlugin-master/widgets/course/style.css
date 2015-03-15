@@ -1,0 +1,11 @@
+/* course */
+#administrate-course .administrate-course-menu {
+	list-style: none inside none;
+	margin: 0;
+}
+#administrate-course .administrate-course-menu .administrate-back {
+	float: left;	
+}
+#administrate-course .administrate-course-menu .administrate-events {
+	float: right;	
+}
